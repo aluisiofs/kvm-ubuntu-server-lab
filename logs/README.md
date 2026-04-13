@@ -79,9 +79,3 @@ logs/setup-kvm.txt
 
 ---
 
-## 🚀 Próximos passos
-
-* Configurar SSH sem senha
-* Instalar Docker
-* Criar ambiente multi-VM
-* Simular infraestrutura cloud
