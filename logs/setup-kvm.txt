@@ -1,0 +1,51 @@
+# Logs de configuração KVM + Ubuntu Server
+
+## Verificação de interfaces de rede
+
+ip a
+
+Interface principal do host:
+
+* eno1 → 192.168.4.3
+
+Interface KVM:
+
+* virbr0 → 192.168.122.1
+
+---
+
+## Teste de conectividade com VM
+
+ping 192.168.122.119
+
+Resultado: comunicação OK
+
+---
+
+## Tentativa de acesso SSH (erro)
+
+ssh aluisio@192.168.122.119/24
+
+Erro:
+Could not resolve hostname
+
+---
+
+## Correção do comando SSH
+
+ssh aluisio@192.168.122.119
+
+---
+
+## Conexão estabelecida
+
+Welcome to Ubuntu 24.04.4 LTS
+
+---
+
+## Comandos executados na VM
+
+history
+
+Observação:
+VM recém instalada, histórico ainda vazio
