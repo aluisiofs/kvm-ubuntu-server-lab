@@ -23,7 +23,7 @@ Projeto prático de virtualização utilizando KVM no Linux (Pop!_OS) com criaç
 
 ### ✔ Configuração de rede
 
-* Interface NAT: 192.168.122.0/24
+* Interface NAT: 192.168.X.X
 * Bridge: virbr0
 
 ### ✔ Criação da VM
@@ -46,8 +46,8 @@ Projeto prático de virtualização utilizando KVM no Linux (Pop!_OS) com criaç
 
 ## 🧪 Testes realizados
 
-* ✔ ping 192.168.122.119
-* ✔ ssh aluisio@192.168.122.119
+* ✔ ping 192.168.X.X
+* ✔ ssh aluisio@192.168.122.X
 * ✔ ip a
 
 ---
@@ -58,7 +58,7 @@ Projeto prático de virtualização utilizando KVM no Linux (Pop!_OS) com criaç
 
 Comando incorreto:
 
-ssh aluisio@192.168.122.119/24
+ssh aluisio@192.168.122.X/X
 
 Erro:
 Could not resolve hostname
@@ -67,7 +67,7 @@ Could not resolve hostname
 
 Uso correto:
 
-ssh aluisio@192.168.122.119
+ssh aluisio@192.168.X.X
 
 ---
 
