@@ -14,7 +14,7 @@ Projeto prático de virtualização utilizando **KVM/QEMU** no Linux (Pop!_OS), 
 
 ## 🖥️ Arquitetura do Ambiente
 
-![Diagrama](docs/diagrama-kvm.png)
+![Diagrama](docs/diagrama_kvm.png)
 
 ---
 
