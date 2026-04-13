@@ -40,7 +40,7 @@ Projeto prático de virtualização utilizando **KVM/QEMU** no Linux (Pop!_OS), 
 
 ---
 
-# 🔧 1. Instalação completa do ambiente KVM (HOST)
+## 🔧 1. Instalação completa do ambiente KVM (HOST)
 
 ## Atualização do sistema
 
@@ -49,17 +49,10 @@ sudo apt update && sudo apt upgrade -y
 ```
 
 ---
-
 ## Instalação dos pacotes de virtualização
 
-<<<<<<< HEAD:README.md
-* Configurar SSH sem senha
-=======
 ```bash
 sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager -y
-```
-
----
 
 ## Verificar suporte à virtualização
 
@@ -90,7 +83,7 @@ systemctl status libvirtd
 
 ---
 
-# 🌐 2. Configuração da rede virtual (NAT)
+## 🌐 2. Configuração da rede virtual (NAT)
 
 ```bash
 sudo virsh net-start default
@@ -113,7 +106,7 @@ Saída esperada:
 
 ---
 
-# 🖥️ 3. Criação da Máquina Virtual
+## 🖥️ 3. Criação da Máquina Virtual
 
 Configurações utilizadas:
 
@@ -143,7 +136,7 @@ opengl is not available
 
 ---
 
-# 🧪 4. Testes de conectividade (HOST)
+## 🧪 4. Testes de conectividade (HOST)
 
 ```bash
 ip a
@@ -152,7 +145,7 @@ ping 192.168.122.X
 
 ---
 
-# 🔐 5. Acesso remoto via SSH
+## 🔐 5. Acesso remoto via SSH
 
 ```bash
 ssh user@192.168.122.X
@@ -160,7 +153,7 @@ ssh user@192.168.122.X
 
 ---
 
-# 🖥️ 6. Configuração do Ubuntu Server (VM)
+## 🖥️ 6. Configuração do Ubuntu Server (VM)
 
 ## Atualizar sistema
 
@@ -234,7 +227,7 @@ sudo dhclient
 
 ---
 
-# ⚠️ Problemas e correções
+## ⚠️ Problemas e correções
 
 ## ❌ SSH não conecta
 
@@ -275,7 +268,7 @@ ping 192.168.122.1
 
 ---
 
-# 📸 Evidências
+## 📸 Evidências
 
 ![Host](docs/ip-host.png)
 ![Ping](docs/ping-vm.png)
@@ -283,7 +276,7 @@ ping 192.168.122.1
 
 ---
 
-# 📂 Logs
+## 📂 Logs
 
 ```bash
 logs/setup-completo.txt
@@ -291,7 +284,7 @@ logs/setup-completo.txt
 
 ---
 
-# 🚀 Resultado
+## 🚀 Resultado
 
 * ✔ Ambiente virtualizado funcional
 * ✔ Rede NAT configurada
@@ -301,11 +294,10 @@ logs/setup-completo.txt
 
 ---
 
-# 🔥 Próximos passos
+## 🔥 Próximos passos
 
 * Docker
 * Kubernetes (K3s)
 * Terraform
 * Simulação AWS local
 * Hardening de segurança
->>>>>>> 5046855b466e6c746d58f4e473348ca7fb99fac2:logs/README.md
