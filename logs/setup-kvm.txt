@@ -1,28 +1,38 @@
-# Logs de configuração KVM + Ubuntu Server
+# 📂 Logs completos - Configuração KVM + Ubuntu Server 24.04.4 LTS
+
+## 🖥️ Ambiente
+
+* Host: Pop!_OS Linux
+* Virtualização: KVM / QEMU / libvirt
+* VM: Ubuntu Server 24.04.4 LTS
+* Rede: NAT (virbr0 - 192.168.122.0/24)
+
+---
+
+# 🔧 COMANDOS EXECUTADOS NO HOST (Pop!_OS)
 
 ## Verificação de interfaces de rede
 
 ip a
 
-Interface principal do host:
+Resultado relevante:
 
 * eno1 → 192.168.4.3
-
-Interface KVM:
-
-* virbr0 → 192.168.122.1
+* virbr0 → 192.168.122.1 (rede da VM)
 
 ---
 
-## Teste de conectividade com VM
+## Teste de conectividade com a VM
 
 ping 192.168.122.119
 
-Resultado: comunicação OK
+Resultado:
+
+* Comunicação OK (0% packet loss)
 
 ---
 
-## Tentativa de acesso SSH (erro)
+## Tentativa de acesso SSH (ERRO)
 
 ssh aluisio@192.168.122.119/24
 
@@ -37,15 +47,119 @@ ssh aluisio@192.168.122.119
 
 ---
 
-## Conexão estabelecida
+## Conexão estabelecida com sucesso
 
 Welcome to Ubuntu 24.04.4 LTS
 
 ---
 
-## Comandos executados na VM
+# 🖥️ COMANDOS EXECUTADOS NA VM (Ubuntu Server)
+
+## Atualização do sistema
+
+sudo apt update && sudo apt upgrade -y
+
+---
+
+## Verificação de rede
+
+ip a
+
+ping -c 6 google.com
+
+---
+
+## Verificação do serviço SSH
+
+sudo systemctl status ssh
+
+---
+
+## Ativação do SSH
+
+sudo systemctl enable --now ssh
+
+---
+
+## Verificação da porta SSH
+
+sudo ss -tulpn | grep :22
+
+---
+
+## Verificação da rede KVM
+
+ip a | grep virbr0
+
+ping -c 7 192.168.122.1
+
+---
+
+## Tentativa de listar leases DHCP (libvirt)
+
+sudo virsh net-dhcp-leases default
+
+sudo virsh -c qemu:///system net-dhcp-leases default
+
+---
+
+## Forçar renovação de IP
+
+sudo dhclient
+
+ip a
+
+---
+
+## Revalidação do SSH
+
+sudo systemctl enable --now ssh
+
+sudo systemctl status ssh
+
+sudo ss -tulpn | grep :22
+
+---
+
+## Histórico de comandos
 
 history
 
-Observação:
-VM recém instalada, histórico ainda vazio
+---
+
+# 🧠 PROBLEMAS ENCONTRADOS E SOLUÇÕES
+
+## ❌ Erro de conexão SSH
+
+Comando incorreto:
+ssh aluisio@192.168.122.119/24
+
+Erro:
+Could not resolve hostname
+
+### ✅ Solução
+
+Uso correto:
+ssh aluisio@192.168.122.119
+
+---
+
+## ❌ SSH não acessível inicialmente
+
+### ✅ Solução
+
+sudo systemctl enable --now ssh
+
+Validação:
+sudo ss -tulpn | grep :22
+
+---
+
+# 🚀 RESULTADO FINAL
+
+* VM criada com sucesso no KVM
+* Rede NAT funcional (virbr0)
+* Comunicação host ↔ VM validada
+* SSH funcionando corretamente
+* Ambiente pronto para uso remoto
+
