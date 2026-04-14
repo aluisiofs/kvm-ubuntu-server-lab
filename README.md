@@ -340,7 +340,7 @@ Este projeto também pode ser executado em ambiente Windows utilizando o **WSL2 
 
 ## 🖥️ Arquitetura do Ambiente
 
-![Diagrama](docs/diagrama_kvm_1.png)
+![Diagrama](docs/diagrama_wsl_1.png)
 
 ---
 
