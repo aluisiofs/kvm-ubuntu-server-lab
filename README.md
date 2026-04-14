@@ -293,11 +293,31 @@ logs/setup-completo.txt
 * ✔ Ambiente pronto para DevOps
 
 ---
+## 🌐 Exposição externa com Cloudflare Tunnel
 
-## 🔥 Próximos passos
+### 🖥️ Sessão tmux
 
-* Docker
-* Kubernetes (K3s)
-* Terraform
-* Simulação AWS local
-* Hardening de segurança
+![tmux](docs/tmux.png)
+
+### 🌐 Servidor local
+
+![server](docs/server.png)
+
+### 🔐 Tunnel ativo
+
+![tunnel](docs/tunnel.png)
+
+### 🌍 Acesso externo
+
+![acesso](docs/acesso-publico.png)
+
+Exemplo de URL gerada:
+
+https://justice-conflict-properties-geological.trycloudflare.com/
+
+> URL dinâmica (modo quick tunnel)
+
+A exposição externa foi realizada via Cloudflare Tunnel (modo quick tunnel), com HTTPS automático. Em ambiente de produção, recomenda-se uso de domínio próprio para URL fixa.
+
+- Comunicação segura via HTTPS (Cloudflare)
+- Sem necessidade de abertura de portas no roteador (NAT bypass)
