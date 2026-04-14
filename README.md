@@ -327,8 +327,7 @@ A exposição externa foi realizada via Cloudflare Tunnel (modo quick tunnel), c
 - Comunicação segura via HTTPS (Cloudflare)
 - Sem necessidade de abertura de portas no roteador (NAT bypass)
 
-
-
+---
 
 ## 🪟 Execução em Windows (WSL2)
 
