@@ -101,7 +101,7 @@ ip a | grep virbr0
 Saída esperada:
 
 ```bash
-192.168.122.1/24
+192.168.X.X/X
 ```
 
 ---
@@ -140,7 +140,7 @@ opengl is not available
 
 ```bash
 ip a
-ping 192.168.122.X
+ping 192.168.X.X
 ```
 
 ---
@@ -148,7 +148,7 @@ ping 192.168.122.X
 ## 🔐 5. Acesso remoto via SSH
 
 ```bash
-ssh user@192.168.122.X
+ssh user@192.168.X.X
 ```
 
 ---
@@ -246,13 +246,13 @@ sudo systemctl enable --now ssh
 ## ❌ Erro de hostname
 
 ```bash
-ssh user@192.168.122.X/24
+ssh user@192.168.X.X/X
 ```
 
 ### Correto:
 
 ```bash
-ssh user@192.168.122.X
+ssh user@192.168.X.X
 ```
 
 ---
