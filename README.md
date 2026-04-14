@@ -321,3 +321,204 @@ A exposição externa foi realizada via Cloudflare Tunnel (modo quick tunnel), c
 
 - Comunicação segura via HTTPS (Cloudflare)
 - Sem necessidade de abertura de portas no roteador (NAT bypass)
+
+## 🪟 Execução em Windows (WSL2)
+
+Este projeto também pode ser executado em ambiente Windows utilizando o **WSL2 (Windows Subsystem for Linux)**, que fornece um kernel Linux real integrado ao sistema.
+
+---
+
+### 📌 Pré-requisitos
+
+* Windows 10 (2004+) ou Windows 11
+* Virtualização habilitada na BIOS/UEFI (Intel VT-x ou AMD-V)
+
+---
+
+### ⚙️ Configuração do Windows
+
+#### ✔️ Recursos que devem estar habilitados
+
+No PowerShell (Administrador):
+
+```bash
+wsl --install
+```
+
+Esse comando habilita automaticamente:
+
+* Plataforma de Máquina Virtual
+* Subsistema do Windows para Linux
+* Hypervisor (necessário para WSL2)
+
+---
+
+### 🔍 Verificar status
+
+```bash
+wsl --status
+```
+
+---
+
+### 🔄 Definir WSL2 como padrão
+
+```bash
+wsl --set-default-version 2
+```
+
+---
+
+### 🐧 Instalar Ubuntu 24.04 LTS
+
+```bash
+wsl --install -d Ubuntu-24.04
+```
+
+Após instalar:
+
+* criar usuário
+* definir senha
+
+---
+
+### 🚀 Acessar o Linux
+
+```bash
+wsl
+```
+
+ou:
+
+```bash
+wsl -d Ubuntu-24.04
+```
+
+---
+
+### 📡 Rede no WSL
+
+O WSL utiliza NAT interno, semelhante ao KVM:
+
+* acesso à internet: automático
+* acesso externo: requer túnel (ex: Cloudflare Tunnel)
+
+---
+
+### 🔐 Acesso SSH no WSL
+
+Instalar:
+
+```bash
+sudo apt update && sudo apt install openssh-server -y
+```
+
+Iniciar:
+
+```bash
+sudo service ssh start
+```
+
+---
+
+### ⚠️ Hyper-V e Virtualização
+
+* O WSL2 **usa o hypervisor do Windows (Hyper-V)** internamente
+* Não é necessário desativar manualmente
+* Deve estar **habilitado automaticamente**
+
+✔ recomendado: manter ativado
+❌ não usar modo "off"
+
+---
+
+### 🚫 Limitação importante
+
+O WSL2 **não suporta KVM/libvirt diretamente**, pois já utiliza o hypervisor do Windows.
+
+👉 Portanto:
+
+* KVM → usar Linux (Pop!_OS, Ubuntu)
+* WSL → ambiente alternativo para desenvolvimento
+
+---
+
+## 💻 Integração com VS Code (WSL)
+
+O VS Code permite desenvolvimento direto dentro do WSL com ambiente Linux completo.
+
+---
+
+### 🔧 Instalar extensão
+
+No VS Code, instale:
+
+👉 **Remote - WSL**
+
+---
+
+### 🚀 Abrir projeto no WSL
+
+No terminal do WSL:
+
+```bash
+code .
+```
+
+---
+
+### 📂 Alternativa pelo VS Code
+
+1. Abrir VS Code
+2. `Ctrl + Shift + P`
+3. Digitar:
+
+```bash
+Remote-WSL: Open Folder in WSL
+```
+
+---
+
+### 📌 Como funciona
+
+* VS Code roda no Windows
+* Código executa dentro do Linux (WSL)
+* Terminal integrado usa Ubuntu
+* Permite usar ferramentas Linux nativas (apt, ssh, node, etc.)
+
+---
+
+### 🔥 Vantagens
+
+✔ Ambiente Linux real no Windows
+✔ Integração direta com terminal
+✔ Compatível com Git e SSH
+✔ Ideal para desenvolvimento full stack
+
+---
+
+### ⚠️ Observação
+
+Para projetos com virtualização avançada (KVM/libvirt), utilize Linux nativo.
+
+---
+
+### 🧠 Resumo
+
+| Ambiente       | Uso recomendado     |
+| -------------- | ------------------- |
+| WSL2 + VS Code | Desenvolvimento     |
+| Linux nativo   | Virtualização (KVM) |
+
+---
+
+### 🎯 Uso no projeto
+
+Neste projeto, o WSL pode ser utilizado para:
+
+* executar comandos Linux
+* gerenciar arquivos
+* usar SSH
+* integrar com GitHub
+
+Enquanto a virtualização KVM é executada no host Linux (Pop!_OS).
