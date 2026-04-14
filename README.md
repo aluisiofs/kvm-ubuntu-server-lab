@@ -11,7 +11,9 @@
 
 ---
 
-Projeto prático de virtualização utilizando **KVM/QEMU** no Linux (Pop!_OS), com criação e configuração de uma VM Ubuntu Server 24.04 LTS e acesso remoto via SSH.
+Projeto prático de virtualização utilizando **KVM/QEMU** no Linux (Pop!_OS), com criação e configuração de uma VM Ubuntu Server 24.04 LTS e acesso remoto via SSH e Windows utilizando o **WSL2 (Windows Subsystem for Linux)**, que fornece um kernel Linux real integrado ao sistema.
+
+
 
 ---
 
