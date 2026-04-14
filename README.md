@@ -1,5 +1,8 @@
 # 🚀 KVM + Ubuntu Server 24.04 Lab
 
+
+![OS](https://img.shields.io/badge/OS-Windows-blue?logo=windows)
+![Virtualization](https://img.shields.io/badge/Virtualization-WSL-red)
 ![Linux](https://img.shields.io/badge/OS-Linux-blue?logo=linux)
 ![KVM](https://img.shields.io/badge/Virtualization-KVM-red)
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04_LTS-orange?logo=ubuntu)
@@ -14,7 +17,7 @@ Projeto prático de virtualização utilizando **KVM/QEMU** no Linux (Pop!_OS), 
 
 ## 🖥️ Arquitetura do Ambiente
 
-![Diagrama](docs/diagrama_kvm.png)
+![Diagrama](docs/diagrama_kvm_0.png)
 
 ---
 
@@ -322,9 +325,22 @@ A exposição externa foi realizada via Cloudflare Tunnel (modo quick tunnel), c
 - Comunicação segura via HTTPS (Cloudflare)
 - Sem necessidade de abertura de portas no roteador (NAT bypass)
 
+
+
+
 ## 🪟 Execução em Windows (WSL2)
 
+![OS](https://img.shields.io/badge/OS-Windows-blue?logo=windows)
+![Virtualization](https://img.shields.io/badge/Virtualization-WSL-red)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04_LTS-orange?logo=ubuntu)
+![Status](https://img.shields.io/badge/status-active-success)
+![Security](https://img.shields.io/badge/security-best_practices-green)
+
 Este projeto também pode ser executado em ambiente Windows utilizando o **WSL2 (Windows Subsystem for Linux)**, que fornece um kernel Linux real integrado ao sistema.
+
+## 🖥️ Arquitetura do Ambiente
+
+![Diagrama](docs/diagrama_kvm_1.png)
 
 ---
 
