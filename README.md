@@ -574,11 +574,10 @@ Criação e configuração de uma VM Ubuntu Server 24.04 LTS utilizando **KVM/QE
 
 ## 🔗 Conecte-se comigo
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/SEU_LINKEDIN_AQUI)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SEU_GITHUB_AQUI)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aluisio-felipe-silva)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/https://www.instagram.com/alusiofelipesilva)
 
 ---
-
 
 ## 🌐 Projetos e Plataformas SaaS em desenvolviemnto!
 
