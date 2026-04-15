@@ -27,7 +27,7 @@ Projeto prático de virtualização utilizando **KVM/QEMU** no Linux (Pop!_OS), 
 
 > ⚠️ Este projeto segue boas práticas de cibersegurança:
 
-* IPs anonimizados (`192.168.X.X`)
+* IPs anonimizados (`XXX.XXX.X.X`)
 * Usuários genéricos (`user`)
 * Nenhuma credencial exposta
 * Estrutura segura para publicação pública
@@ -106,7 +106,7 @@ ip a | grep virbr0
 Saída esperada:
 
 ```bash
-192.168.X.X/X
+XXX.XXX.X.X/X
 ```
 
 ---
@@ -145,7 +145,7 @@ opengl is not available
 
 ```bash
 ip a
-ping 192.168.X.X
+ping XXX.XXX.X.X
 ```
 
 ---
@@ -153,7 +153,7 @@ ping 192.168.X.X
 ## 🔐 5. Acesso remoto via SSH
 
 ```bash
-ssh user@192.168.X.X
+ssh user@XXX.XXX.X.X
 ```
 
 ---
@@ -211,7 +211,7 @@ sudo ss -tulpn | grep :22
 ## Verificar comunicação com host
 
 ```bash
-ping -c 7 192.168.122.1
+ping -c 7 XXX.XXX.XXX.X
 ```
 
 ---
@@ -251,13 +251,13 @@ sudo systemctl enable --now ssh
 ## ❌ Erro de hostname
 
 ```bash
-ssh user@192.168.X.X/X
+ssh user@XXX.XXX.X/X
 ```
 
 ### Correto:
 
 ```bash
-ssh user@192.168.X.X
+ssh user@XXX.XXX.X.X
 ```
 
 ---
@@ -268,12 +268,14 @@ ssh user@192.168.X.X
 
 ```bash
 ip a
-ping 192.168.122.1
+ping XXX.XXX.XXX.X
 ```
 
 ---
 
 ## 📸 Evidências
+
+```Em breve seram inserido as imagens para demostração!
 
 ![Host](docs/ip-host.png)
 ![Ping](docs/ping-vm.png)
@@ -539,3 +541,59 @@ Neste projeto, o WSL pode ser utilizado para:
 * integrar com GitHub
 
 Enquanto a virtualização KVM é executada no host Linux (Pop!_OS).
+
+---
+
+## 🎯 Uso no Projeto
+
+Neste projeto, o **WSL2** é utilizado como ambiente alternativo integrado ao Windows para:
+
+* ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black) **Executar comandos Linux nativamente**
+* ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white) **Gerenciar arquivos de sistema**
+* ![SSH](https://img.shields.io/badge/SSH-231F20?style=flat-square&logo=gnometerminal&logoColor=white) **Estabelecer acesso remoto seguro**
+* ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white) **Integrar com controle de versão**
+
+Enquanto isso, a infraestrutura e virtualização rodam diretamente no host Linux, utilizando:
+
+* ![Pop!_OS](https://img.shields.io/badge/Pop!_OS-48B9C7?style=flat-square&logo=pop!_os&logoColor=white) **Sistema Operacional Host**
+* ![KVM/QEMU](https://img.shields.io/badge/KVM/QEMU-E95420?style=flat-square&logo=linux&logoColor=white) **Hypervisor Nativo**
+
+---
+
+## 👨‍💻 Sobre o Autor e o Projeto
+
+Este repositório serve como laboratório prático e base de estudos em ferramentas de **Linux** e **Windows**, com foco em infraestrutura e Cibersegurança. O projeto foi estruturado a partir dos conhecimentos aplicados no **Bootcamp de Cibersegurança da DIO em parceria com a Riachuelo**.
+
+**O Laboratório Prático consiste em:**
+
+![Ubuntu Server](https://img.shields.io/badge/Ubuntu_Server_24.04-E95420?style=flat-square&logo=ubuntu&logoColor=white) ![WSL2](https://img.shields.io/badge/WSL2-0a97f5?style=flat-square&logo=windows&logoColor=white)
+
+Criação e configuração de uma VM Ubuntu Server 24.04 LTS utilizando **KVM/QEMU** no Linux (Pop!_OS), com acesso remoto via SSH e integração a partir do Windows utilizando o **WSL2 (Windows Subsystem for Linux)**, que fornece um kernel Linux real e otimizado ao sistema.
+
+---
+
+## 🔗 Conecte-se comigo
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/SEU_LINKEDIN_AQUI)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SEU_GITHUB_AQUI)
+
+---
+
+
+## 🌐 Projetos e Plataformas SaaS em desenvolviemnto!
+
+* 💧 **Sistema de Água e Saneamento** ![AWS](https://img.shields.io/badge/AWS_Cloud-232F3E?style=flat-square&logo=amazon-aws&logoColor=white)
+  👉 [Acessar Portal](https://d10p43vbhz29k2.cloudfront.net/portal/login)
+
+* 🚀 **Memprega Brasil** ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white) ![PWA](https://img.shields.io/badge/PWA-5A0FC8?style=flat-square&logo=pwa&logoColor=white)
+  *Plataforma PWA voltada para Atração e Seleção de Talentos.*
+  👉 [www.mempregabrasil.com.br](https://www.mempregabrasil.com.br/)
+
+---
+
+## 🧾 Informações Empresariais
+
+Serviços de desenvolvimento de sistemas, soluções em TI, programação, Computação em Nuvem e Cibersegurança.
+
+* **CNPJ:** `64.134.678/0001-40`
+* ![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=flat-square&logo=whatsapp&logoColor=white) **WhatsApp:** (47) 99982-4618 | (35) 99855-3011
